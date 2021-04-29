@@ -65,10 +65,14 @@ let app = {
         return Math.floor( segment / total * 100 )
     },
     displayPopularity: () => {
+        
         const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        
         const popularityTab = Object.values(base.vote);
         const total = popularityTab.reduce(reducer)
+        
         const targetArticles = document.querySelectorAll('.trends article')
+        
         for (let i = 0; i < targetArticles.length; i++) {
             const taux = app.averagePopularity( popularityTab[i], total )
             targetArticles[i].childNodes[3].textContent = `${ taux }%`;

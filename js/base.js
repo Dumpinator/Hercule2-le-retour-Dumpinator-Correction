@@ -6,8 +6,8 @@ const base = {
   vote: {
     hercule: 120,
     cesar: 53,
-    hades: 12,
-    Athena: 63,
+    athena: 64,
+    brutus:3,
   },
   activities: [
     {
@@ -41,8 +41,8 @@ const base = {
    * @returns {number} The current hour
    */
   getHour: function() {
-    const date = new Date();
-    return date.getHours();
+    //const date = new Date().getHours();
+    return new Date().getHours();
   },
   /**
    * Write the best friend in the document
